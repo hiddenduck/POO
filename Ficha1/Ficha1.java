@@ -1,4 +1,4 @@
-package com.company;
+package com.Ficha1;
 
 public class Ficha1 {
     public double celsiusParaFarenheit(double graus){ // F = C x 1,8 + 32

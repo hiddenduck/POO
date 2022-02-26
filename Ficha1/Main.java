@@ -1,4 +1,4 @@
-package com.company;
+package com.Ficha1;
 
 import java.util.Scanner;
 public class Main {
