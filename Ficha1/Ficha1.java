@@ -20,7 +20,7 @@ public class Ficha1 {
     public long factorial(int num){
         int r = 1, i;
 
-        for(i=2; i<num; i++)
+        for(i=2; i<=num; i++)
             r *= i;
 
         return r;
