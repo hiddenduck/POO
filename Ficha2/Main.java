@@ -172,6 +172,92 @@ public class Main {
                 break;
 
             case 5:
+
+                break;
+
+            case 6: // vou continuar com IO apenas no main portanto a alínea a) passa a ser implementada em cada alínea
+                Exe6 ficha_6 = new Exe6();
+                System.out.println("Escolha a alínea (b, c ou d):");
+                switch(sc.next()){
+                    case "b":
+                        int[][] matriz1, matriz2;
+                        int i, j;
+                        System.out.println("Introduza o número de linhas:");
+                        int linhas = sc.nextInt();
+                        System.out.println("Introduza o número de colunas:");
+                        int colunas = sc.nextInt();
+                        matriz1 = new int[linhas][colunas];
+                        matriz2 = new int[linhas][colunas];
+                        System.out.println("Primeira Matriz");
+                        for(i=0; i<linhas; i++) {
+                            System.out.println("Linha " + i + ": ");
+                            for (j = 0; j < colunas; j++) {
+                                System.out.println("Proximo elemento da coluna " + j + ": ");
+                                matriz1[i][j] = sc.nextInt();
+                            }
+                        }
+                        System.out.println("Segunda Matriz");
+                        for(i=0; i<linhas; i++) {
+                            System.out.println("Linha " + i + ": ");
+                            for (j = 0; j < colunas; j++) {
+                                System.out.println("Proximo elemento da coluna " + j + ": ");
+                                matriz2[i][j] = sc.nextInt();
+                            }
+                        }
+
+                        System.out.println("Soma por entrada:" + Arrays.deepToString(ficha_6.somaMatrizes(matriz1, matriz2)));
+                        break;
+
+                    case "c":
+                        int[][] matriz1_b, matriz2_b;
+                        int i_b, j_b;
+                        System.out.println("Introduza o número de linhas:");
+                        int linhas_b = sc.nextInt();
+                        System.out.println("Introduza o número de colunas:");
+                        int colunas_b = sc.nextInt();
+                        matriz1_b = new int[linhas_b][colunas_b];
+                        matriz2_b = new int[linhas_b][colunas_b];
+                        System.out.println("Primeira Matriz");
+                        for(i_b=0; i_b<linhas_b; i_b++) {
+                            System.out.println("Linha " + i_b + ": ");
+                            for (j_b = 0; j_b < colunas_b; j_b++) {
+                                System.out.println("Proximo elemento da coluna " + j_b + ": ");
+                                matriz1_b[i_b][j_b] = sc.nextInt();
+                            }
+                        }
+                        System.out.println("Segunda Matriz");
+                        for(i_b=0; i_b<linhas_b; i_b++) {
+                            System.out.println("Linha " + i_b + ": ");
+                            for (j_b = 0; j_b < colunas_b; j_b++) {
+                                System.out.println("Proximo elemento da coluna " + j_b + ": ");
+                                matriz2_b[i_b][j_b] = sc.nextInt();
+                            }
+                        }
+
+                        System.out.println((ficha_6.iguais(matriz1_b, matriz2_b)) ? "As matrizes são iguais" : "As matrizes não são iguais");
+                        break;
+
+                    case "d":
+                        int[][] matriz;
+                        int i_c, j_c;
+                        System.out.println("Introduza o número de linhas:");
+                        int linhas_c = sc.nextInt();
+                        System.out.println("Introduza o número de colunas:");
+                        int colunas_c = sc.nextInt();
+                        matriz = new int[linhas_c][colunas_c];
+                        System.out.println("Matriz:");
+                        for(i_c=0; i_c<linhas_c; i_c++) {
+                            System.out.println("Linha " + i_c + ": ");
+                            for (j_c = 0; j_c < colunas_c; j_c++) {
+                                System.out.println("Proximo elemento da coluna " + j_c + ": ");
+                                matriz[i_c][j_c] = sc.nextInt();
+                            }
+                        }
+
+                        System.out.println("A matriz oposta de " + Arrays.deepToString(matriz) + " é " + Arrays.deepToString(ficha_6.matrizOposta(matriz)));
+                        break;
+                }
+
                 break;
 
             case 7:
