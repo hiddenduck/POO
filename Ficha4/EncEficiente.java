@@ -1,5 +1,6 @@
 package Ficha4;
 import Ficha3.LinhaDeEncomenda;
+import Ficha5.LinhaEncomenda;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -100,9 +101,6 @@ public class EncEficiente {
         return numFiscalCliente == that.numFiscalCliente && numEnc == that.numEnc && Objects.equals(nomeCliente, that.nomeCliente) && Objects.equals(moradaCliente, that.moradaCliente) && Objects.equals(dataEnc, that.dataEnc) && Objects.equals(linhasEnc, that.linhasEnc);
     }
 
-    public String toString(){
-        return "";
-    }
 
     public double calculaValorTotal(){
         double resultado = 0;
@@ -136,5 +134,23 @@ public class EncEficiente {
 
     public void removeProduto(String codProd){
         this.linhasEnc.removeIf(linhaDeEncomenda -> Objects.equals(linhaDeEncomenda.getRefe(), codProd));
+    }
+
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("EncEficiente{")
+                .append(nomeCliente).append('\'')
+                .append(", numFiscalCliente='").append(numFiscalCliente)
+                .append(", moradaCliente='").append(moradaCliente)
+                .append('\'').append(", numEnc=")
+                .append(numEnc).append(", dataEnc='")
+                .append(dataEnc).append('\'');
+
+        stringBuilder.append(", linhas de encomenda: \n");
+        for(LinhaDeEncomenda linhaEncomenda: this.linhasEnc){
+            stringBuilder.append(linhaEncomenda.toString()).append('\n');
+        }
+        
+        return stringBuilder.toString();
     }
 }
